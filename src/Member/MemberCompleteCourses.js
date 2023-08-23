@@ -5,7 +5,7 @@ const MemberCompleteCourses = () => {
     const [getTrueCources,setTrueCources] = useState([]);
     const [getFalseStaus_cources, setFalseStausCources] = useState([]);
     const getTrueStausCources = async () => {
-        let result = await fetch("http://localhost:5000/User/getTrueStausCources");
+        let result = await fetch("http://128.199.221.11:5000/User/getTrueStausCources");
         result = await result.json();
         console.log(result)
         console.log("hamzano stratus found")
@@ -18,7 +18,7 @@ const MemberCompleteCourses = () => {
         // setLoading(false)
       };
       const getFalseStausCources = async () => {
-        let result = await fetch("http://localhost:5000/User/getFalseStausCources");
+        let result = await fetch("http://128.199.221.11:5000/User/getFalseStausCources");
         result = await result.json();
         console.log(result)
         console.log("hamzano stratus found")
@@ -65,7 +65,7 @@ const MemberCompleteCourses = () => {
                     <div className='col-sm-2' id="set_height_width">
                         {/* <img src='/medical-doctor.png' className='rounded'></img> */}
                     <ReactPlayer
-                    url={`http://localhost:5000/uploads/${trueCources.image}`}
+                    url={`http://128.199.221.11:5000/uploads/${trueCources.image}`}
                     controls={true}
                     // className="set_height_width"
                     
@@ -116,7 +116,7 @@ const MemberCompleteCourses = () => {
                             {/* <img height="80%" src='/Recommended-Course-1.png' className='rounded' width="100%"></img> */}
                             <ReactPlayer
                                 // ref={playerRef}
-                                url={`http://localhost:5000/uploads/${falseStaus.image}`}
+                                url={`http://128.199.221.11:5000/uploads/${falseStaus.image}`}
                                 controls={true}
                                 // onProgress={handleTime}
                                 // onEnded={handleVideoEnded}
