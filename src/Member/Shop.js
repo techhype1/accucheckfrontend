@@ -16,7 +16,7 @@ const Shop = () => {
     getData();
   }, []);
   const getData = async () => {
-    let result = await fetch("http://localhost:5000/Admin/getProducts");
+    let result = await fetch("http://128.199.221.11:5000/Admin/getProducts");
     result = await result.json();
     console.log(result);
     if(result<0){
@@ -104,7 +104,7 @@ const Shop = () => {
   return(
     <div className='col-md-3 mb-5 set_card_showdow'>
             <div className="card product_card border-0" >
-                <img src={`http://localhost:5000/uploads/${product.image}`} height="277px" width="306px" className="card-img-top" alt="..."/>
+                <img src={`http://128.199.221.11:5000/uploads/${product.image}`} height="277px" width="306px" className="card-img-top" alt="..."/>
                 <div className="card-body">
                   <div className='product_details font_family_common d-flex justify-content-between align-items-center h-50'>
                   <h5 className="card-title font_family_common">{product.title}</h5>

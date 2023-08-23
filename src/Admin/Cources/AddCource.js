@@ -63,7 +63,7 @@ let AddCource = () => {
     try {
       console.log("IN If Condointment")
       // send a POST request to the server to add the product
-      let response = await axios.post("http://localhost:5000/Admin/addCources", formData);
+      let response = await axios.post("http://128.199.221.11:5000/Admin/addCources", formData);
       console.log(response.data); 
       if(response.status=== 201){
         Swal.fire("success!", "Cource add Sucessfuly!", "success");

@@ -42,44 +42,7 @@ const handleTime = ({ playedSeconds }) => {
 };
 
 
-// const handleTime = ({ playedSeconds }) => {
-//     const handleTime = ({ playedSeconds }) => {
-//     console.log('Played Seconds:', playedSeconds);
-//     console.log('handleTime called:', playedSeconds);
-//     // ... (rest of the function)
-// };
-//     if (!startTime) {
-//         setStartTime(playedSeconds);
-//     }
 
-//     if (!videoCompleted) {
-//         setEndTIme(playedSeconds);
-//         setTimeWatched(playedSeconds - startTime);
-//     }
-// };
-// const handleTime = ({ playedSeconds }) => {
-//     if (!startTime) {
-//         setStartTime(playedSeconds);
-//     }
-
-//     if (!videoCompleted) {
-//         setEndTIme(playedSeconds);
-//         const newTimeWatched = playedSeconds - startTime;
-//         setTimeWatched(newTimeWatched);
-
-//         const videoDurationInSeconds = convertToSeconds(getProducts[0]?.duration);
-//         const calculatedProgress = (newTimeWatched / videoDurationInSeconds) * 100;
-//         const progressPercentage = Math.min(calculatedProgress, 100);
-//         setProgress(progressPercentage);
-//     }
-// };
-// const handleVideoEnded = () => {
-//     setVideoCompleted(true);
-//     setStartTime(null);
-//     setEndTIme(null);
-//     alert('Video ended');
-// };
-  
 
 const handleVideoEnded = () => {
     setVideoCompleted(true);
@@ -91,7 +54,7 @@ const handleVideoEnded = () => {
 };
 
     const getData = async () => {
-        let result = await fetch("http://localhost:5000/Admin/getCources");
+        let result = await fetch("http://128.199.221.11:5000/Admin/getCources");
         result = await result.json();
         if(result<0){
           result.send("<h1>No Data!</h1>")
@@ -102,7 +65,7 @@ const handleVideoEnded = () => {
         setLoading(false)
       };
       const getFalseStausCources = async () => {
-        let result = await fetch("http://localhost:5000/User/getFalseStausCources");
+        let result = await fetch("http://128.199.221.11:5000/User/getFalseStausCources");
         result = await result.json();
         console.log(result)
         console.log("hamzano stratus found")
@@ -178,7 +141,7 @@ return (
                 {/* Video Player */}
                 <ReactPlayer
                     ref={playerRef}
-                    url={`http://localhost:5000/uploads/${product.image}`}
+                    url={`http://128.199.221.11:5000/uploads/${product.image}`}
                     controls={true}
                     // onProgress={handleTime}
                     // onEnded={handleVideoEnded}
@@ -238,7 +201,7 @@ return (
                             {/* <img height="80%" src='/Recommended-Course-1.png' className='rounded' width="100%"></img> */}
                             <ReactPlayer
                                 // ref={playerRef}
-                                url={`http://localhost:5000/uploads/${falseStaus.image}`}
+                                url={`http://128.199.221.11:5000/uploads/${falseStaus.image}`}
                                 controls={true}
                                 // onProgress={handleTime}
                                 // onEnded={handleVideoEnded}
