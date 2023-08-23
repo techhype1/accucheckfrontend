@@ -42,44 +42,7 @@ const handleTime = ({ playedSeconds }) => {
 };
 
 
-// const handleTime = ({ playedSeconds }) => {
-//     const handleTime = ({ playedSeconds }) => {
-//     console.log('Played Seconds:', playedSeconds);
-//     console.log('handleTime called:', playedSeconds);
-//     // ... (rest of the function)
-// };
-//     if (!startTime) {
-//         setStartTime(playedSeconds);
-//     }
 
-//     if (!videoCompleted) {
-//         setEndTIme(playedSeconds);
-//         setTimeWatched(playedSeconds - startTime);
-//     }
-// };
-// const handleTime = ({ playedSeconds }) => {
-//     if (!startTime) {
-//         setStartTime(playedSeconds);
-//     }
-
-//     if (!videoCompleted) {
-//         setEndTIme(playedSeconds);
-//         const newTimeWatched = playedSeconds - startTime;
-//         setTimeWatched(newTimeWatched);
-
-//         const videoDurationInSeconds = convertToSeconds(getProducts[0]?.duration);
-//         const calculatedProgress = (newTimeWatched / videoDurationInSeconds) * 100;
-//         const progressPercentage = Math.min(calculatedProgress, 100);
-//         setProgress(progressPercentage);
-//     }
-// };
-// const handleVideoEnded = () => {
-//     setVideoCompleted(true);
-//     setStartTime(null);
-//     setEndTIme(null);
-//     alert('Video ended');
-// };
-  
 
 const handleVideoEnded = () => {
     setVideoCompleted(true);
