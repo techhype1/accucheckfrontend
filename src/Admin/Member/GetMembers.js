@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 import Loader from "../../components/Loader";
+// import { getProductsApi } from "../../Configuration/Const";
 const GetMembers = () => {
   const [getMember, setMember] = useState([]);
   const [isloading, setLoading] = useState(true)
@@ -13,7 +14,7 @@ const GetMembers = () => {
   }, []);
 
   const getData = async () => {
-    let result = await fetch("http://localhost:5000/User/getMembers");
+    let result = await fetch("http://128.199.221.11:5000/User/getMembers");
     result = await result.json();
     if(result<0){
       result.send("<h1>No Data!</h1>")
@@ -35,7 +36,7 @@ const GetMembers = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         // Delete the product
-        await fetch(`http://localhost:5000/User/dellMember/${id}`, {
+        await fetch(`http://128.199.221.11:5000/User/dellMember/${id}`, {
           method: "DELETE",
         })
           .then((response) => {

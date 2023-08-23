@@ -65,7 +65,7 @@
       try {
         console.log("IN If Condointment")
         // send a POST request to the server to add the product
-        let response = await axios.post("http://localhost:5000/Admin/addProduct", formData);
+        let response = await axios.post("http://128.199.221.11:5000/Admin/addProduct", formData);
         // console.log(response.data); 
         // const response1 =response.json();
         if(response.status=== 201){

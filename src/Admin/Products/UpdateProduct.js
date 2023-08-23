@@ -18,7 +18,7 @@
 //   const getUserData = async () => {
 //     console.log(params);
 //     let result = await fetch(
-//       `http://localhost:5000/Admin/getSingleProduct/${params.id}`
+//       `http://128.199.221.11:5000/Admin/getSingleProduct/${params.id}`
 //     );
 //     result = await result.json();
 //     setTITLE(result.title);
@@ -31,7 +31,7 @@
 //   const updatingData = async () => {
 //     // e.preventDefault();
 //     let result = await fetch(
-//       `http://localhost:5000/Admin/updateProduct/${params.id}`,
+//       `http://128.199.221.11:5000/Admin/updateProduct/${params.id}`,
 //       {
 //         method: "PUT",
 //         body: JSON.stringify({
@@ -99,7 +99,7 @@
 //     } else {
 //       Swal.fire("Good job!", "Product added successfully!", "success");
 //       try {
-//         const result = await fetch("http://localhost:5000/Admin/updateProduct/:_id", {
+//         const result = await fetch("http://128.199.221.11:5000/Admin/updateProduct/:_id", {
 //           method: "POST",
 //           body: JSON.stringify(product),
 //           headers: {
@@ -252,7 +252,7 @@ const UpdateProduct = () => {
 
   const getUserData = async () => {
     let result = await fetch(
-      `http://localhost:5000/Admin/getSingleProduct/${params.id}`
+      `http://128.199.221.11:5000/Admin/getSingleProduct/${params.id}`
     );
     result = await result.json();
     setTitle(result.title);
@@ -264,7 +264,7 @@ const UpdateProduct = () => {
   const updatingData = async () => {
     try {
       let result = await fetch(
-        `http://localhost:5000/Admin/updateProduct/${params.id}`,
+        `http://128.199.221.11:5000/Admin/updateProduct/${params.id}`,
         {
           method: "PUT",
           body: JSON.stringify({

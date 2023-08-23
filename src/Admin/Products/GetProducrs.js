@@ -3,16 +3,17 @@ import { useState,useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 import Loader from "../../components/Loader";
-import { getProductsApi } from "../../Configuration/Const";
+import { getProductsApi, deleteProductApi, handleDelete } from "../../Configuration/Const";
 const GetProducrs = () => {
   const [getProducts, setProducts] = useState([]);
   const [isloading, setLoading] = useState(true)
   useEffect(() => {
     getData();
+    
   }, []);  
   const getData = async () => {
     try {
-      const response = await getProductsApi; // Call the API
+      const response = await fetch("http://128.199.221.11:5000/Admin/getProducts"); // Call the API
       const result = await response.json(); 
   
       console.log("Result from API Members list", result);
@@ -28,8 +29,7 @@ const GetProducrs = () => {
       setLoading(false);
     }
   };
-  
-  const handleDelete = async (id) => {
+   const handleDelete = async (id) => {
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -41,14 +41,14 @@ const GetProducrs = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         // Delete the product
-        await fetch(`http://localhost:5000/Admin/dellProduct/${id}`, {
+        await fetch(`http://128.199.221.11:5000/Admin/dellProduct/${id}`, {
           method: "DELETE",
         })
           .then((response) => {
             if (response.ok) {
               console.log("Resource deleted successfully");
               // Call getData to fetch updated product list
-              getData();
+            //   getData();
             } else {
               console.error("Error deleting resource");
             }
@@ -65,7 +65,7 @@ const GetProducrs = () => {
       }
     });
   };
-  
+   
   return (
 
     <>
@@ -88,7 +88,7 @@ const GetProducrs = () => {
             <td>
               <div class="d-flex align-items-center">
                 <img
-                  src={`http://localhost:5000/uploads/${product.image}`}
+                  src={`http://128.199.221.11:5000/uploads/${product.image}`}
                   alt=""
                   style={{ width: "45px", height: "45px" }}
                   class="rounded-circle"
@@ -115,6 +115,7 @@ const GetProducrs = () => {
               </NavLink>
               <button onClick={() => {
                       handleDelete(product._id);
+                      // handleDelete();
                       // toast.error("Data Delete successfully");
                       console.log(product._id);
                     }} type="button" className="btn btn-danger btn-sm ">

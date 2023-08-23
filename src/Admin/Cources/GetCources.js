@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import Loader from '../../components/Loader'
-// import getCourcesApi from "../../Configuration/Const"
+import {getCourcesApi} from "../../Configuration/Const"
 const GetCources = () => {
 // Fet All Cources from Database
 const [getProducts, setProducts] = useState([]);
@@ -12,8 +12,8 @@ useEffect(() => {
 }, []);
 
 const getData = async () => {
-  let result = await fetch("http://localhost:5000/Admin/getCources");
-  result = await result.json();
+  let response = await fetch("http://128.199.221.11:5000/Admin/getCources") ;
+  let result = await response.json();
   if(result<0){
     result.send("<h1>No Data!</h1>")
   }
@@ -73,7 +73,7 @@ let count2 = getProducts.length;
               <div className="row mb-3 for_row_background">
               <div className='col-md-4'>
                   <div className="vedio_ThumNail">
-                    <ReactPlayer url={`http://localhost:5000/uploads/${Cource.image}`} controls={true} onProgress={handleTime}   onEnded={handleVideoEnded} />
+                    <ReactPlayer url={`http://128.199.221.11:5000/uploads/${Cource.image}`} controls={true} onProgress={handleTime}   onEnded={handleVideoEnded} />
                     {console.log(`Time taken: ${endTime && startTime ? (endTime - startTime) / 1000 + " seconds" : "N/A"}`)}
 
                   </div>

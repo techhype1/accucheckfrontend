@@ -52,7 +52,7 @@ const SideBar = () => {
     e.preventDefault();
 
     try {
-      let result = await fetch("http://localhost:5000/User/userRegister", {
+      let result = await fetch("http://128.199.221.11:5000/User/userRegister", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {

@@ -19,7 +19,7 @@
 //   const getUserData = async () => {
 //     console.log(params);
 //     let result = await fetch(
-//       `http://localhost:5000/User/getSingleMember/${params.id}`
+//       `http://128.199.221.11:5000/User/getSingleMember/${params.id}`
 //     );
 //     result = await result.json();
 //     setName(result.name);
@@ -41,7 +41,7 @@
 //   const updatingData = async (e) => {
 //     e.preventDefault();
 //     let result = await fetch(
-//       `http://localhost:5000/User/updateSingleMember/${params.id}`,
+//       `http://128.199.221.11:5000/User/updateSingleMember/${params.id}`,
 //       {
 //         method: "PUT",
 //         body: JSON.stringify({
@@ -93,7 +93,7 @@
 //   };
 //   const savebtnhandler = async (e) => {
 //     e.preventDefault();
-//     let result = await fetch("http://localhost:5000/User/userRegister", {
+//     let result = await fetch("http://128.199.221.11:5000/User/userRegister", {
 //       method: "POST",
 //       body: JSON.stringify(user),
 //       headers: {
@@ -322,7 +322,7 @@ const UpdateMember = () => {
 
   const getUserData = async () => {
     let result = await fetch(
-      `http://localhost:5000/User/getSingleMember/${params.id}`
+      `http://128.199.221.11:5000/User/getSingleMember/${params.id}`
     );
     result = await result.json();
     setName(result.name);
@@ -368,7 +368,7 @@ const UpdateMember = () => {
     if (Object.keys(validationErrors).length === 0) {
       try {
         let result = await fetch(
-          `http://localhost:5000/User/updateSingleMember/${params.id}`,
+          `http://128.199.221.11:5000/User/updateSingleMember/${params.id}`,
           {
             method: "PUT",
             body: JSON.stringify({
