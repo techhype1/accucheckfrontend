@@ -32,28 +32,9 @@ const Signin = () => {
       const token = data.token; 
       // Store the token in local storage
       localStorage.setItem('jwtToken', token);
-      navigate('/user')
-      window.alert("Successfull")
+      navigate('/user/MemberHome')
+      // window.alert("Successfull")
     }
-    // if (
-    //   !email ||
-    //   !password 
-    // ) {
-    //   console.log("Login Sucessfully");
-    //   Swal.fire({
-    //     position:"top-end",
-    //     icon: "error",
-    //     title: "Oops...",
-    //     text: "Please enter your all required fields",
-    //     footer: '<a href="">Why do I have this issue?</a>',
-    //   });
-    // } else {
-    //   Swal.fire("Good job!", "Login Sucessfully!", "success");
-    //   navigate('/user')
-    // }
-    // result = await result.json();
-
-    // console.log("RESULT after Fecth", result);
   };
   const myFun=()=>{
     const toggle = document.querySelector("#togglePassword");

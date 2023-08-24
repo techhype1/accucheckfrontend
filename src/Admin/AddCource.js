@@ -71,7 +71,7 @@ let AddCource = () => {
         resetFormData();
       
       navigate('/Admin/Dashboard/GetCources')
-      window.alert("Successfull")
+      // window.alert("Successfull")
     }else{
       Swal.fire({
         position:"center",

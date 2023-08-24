@@ -2,7 +2,9 @@
   import Swal from "sweetalert2";
   import Joi from "joi-browser";
   import axios from "axios";
+  import { useNavigate } from "react-router-dom";
   const AddProduct = () => {
+    const navigate = useNavigate()
     let [title, settitle] = useState("");
     let [id, setId] = useState("");
     let [description, setdiscription] = useState("");
@@ -71,8 +73,8 @@
         if(response.status=== 201){
         Swal.fire("success!", "Product add Sucessfuly!", "success");
       
-      // navigate('/user')
-      window.alert("Successfull")
+      navigate('/Admin/Dashboard/GetProducrs')
+      // window.alert("Successfull")
     }else{
       Swal.fire({
         position:"center",

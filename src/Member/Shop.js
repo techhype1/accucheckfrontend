@@ -76,6 +76,13 @@ const Shop = () => {
             Gifts
           </button>
           {/* 5th Button */}
+          {/*  */}
+          <button
+            className={`btn common_button font_family_common btn_equal ${selectedCategory === 'Electronics' ? 'active' : ''}`}
+            onClick={() => setSelectedCategory('Electronics')}>
+            Electronics
+          </button>
+          {/*  */}
           <button
             className={`btn common_button font_family_common btn_equal ${selectedCategory === 'Clothing' ? 'active' : ''}`}
             onClick={() => setSelectedCategory('Clothing')}>
@@ -102,9 +109,9 @@ const Shop = () => {
 <div className="row">
 {getProducts.filter(product => selectedCategory === 'All' || product.category === selectedCategory).map((product) =>{
   return(
-    <div className='col-md-3 mb-5 set_card_showdow'>
+    <div className='col-md-3 col-sm-6 col-xs-12 mb-5 set_card_showdow'>
             <div className="card product_card border-0" >
-                <img src={`http://128.199.221.11:5000/uploads/${product.image}`} height="277px" width="306px" className="card-img-top" alt="..."/>
+                <img src={`http://128.199.221.11:5000/uploads/${product.image}`} height="277px" width="306px" className="card-img-top img-fluid" alt="..."/>
                 <div className="card-body">
                   <div className='product_details font_family_common d-flex justify-content-between align-items-center h-50'>
                   <h5 className="card-title font_family_common">{product.title}</h5>
