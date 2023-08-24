@@ -11,7 +11,7 @@ const navigate = useNavigate();
     e.preventDefault();
     console.log(email, password);
     
-    let result = await fetch("http://128.199.221.11:5000/Admin/adminSigin", {
+    let result = await fetch("http://localhost:5000/Admin/adminSigin", {
       method: "POST",
       body: JSON.stringify({
         email,
@@ -39,8 +39,8 @@ const navigate = useNavigate();
       localStorage.setItem('jwtToken', token);
   
       // Redirect to the protected admin dashboard 
-      navigate('/Admin/Dashboard/AddUser');
-      // window.alert("Successful");
+      navigate('/Admin/Dashboard');
+      window.alert("Successful");
     } 
   };
   
