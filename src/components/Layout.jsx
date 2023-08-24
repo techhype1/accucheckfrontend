@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 const Layout = () => {
   const handleLogout = () => {
-    // localStorage.removeItem('jwtToken'); // Remove the token from local storage
+    localStorage.removeItem('jwtToken'); // Remove the token from local storage
     // Redirect to the login page or wherever you want
   };
   return (

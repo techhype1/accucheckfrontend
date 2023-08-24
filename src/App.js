@@ -1,17 +1,17 @@
-import GetProducrs from "./Admin/GetProducrs";
+import GetProducrs from "./Admin/Products/GetProducrs";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import AddUser from "./Admin/AddUser1";
-import AddProduct from "./Admin/AddProduct";
-import AddCource from "./Admin/AddCource";
-import GetCources from "./Admin/GetCources";
-import GetMembers from "./Admin/GetMembers";
+import AddUser from "./Admin/Member/AddUser1";
+import AddProduct from "./Admin/Products/AddProduct";
+import AddCource from "./Admin/Cources/AddCource";
+import GetCources from "./Admin/Cources/GetCources";
+import GetMembers from "./Admin/Member/GetMembers";
 
 
 // Update routes
-import UpdateProduct from "./Admin/UpdateProduct";
-import UpdateMember from "./Admin/UpdateMember";
+import UpdateProduct from "./Admin/Products/UpdateProduct";
+import UpdateMember from "./Admin/Member/UpdateMember";
 // wnd update routes
 
 // User FroentEnd Pages
@@ -20,6 +20,7 @@ import Signin from "./pages/Signin";
 import ForgotPassword from "./pages/ForgotPassword";
 import MemberLayout from "./components/MemberLayout";
 import TopHeader from "./components/TopHeader";
+// import MemberHome from "./Member/MemberHome";
 // import 
 import Shop from "./Member/Shop";
 import MemberHome from "./Member/MemberHome";
@@ -37,11 +38,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin />}/>
           <Route path="/CreateAccont" element={<CreateAccont/>}/>
-          <Route path="/ForgotPassword" element={<ForgotPassword/>}/>   
-          <Route path="/Admin" element={<SigninAdmin />} />   
-        </Routes>  
-            {/* User Hamza */}
-         <Routes>
+          <Route path="/ForgotPassword" element={<ForgotPassword/>}/>        
+            {/* User */}
+          <Route path="/Admin" element={<SigninAdmin />} />
           {/* <Route path="/Admin/Dashboard" element={<Layout />} > */}
           <Route path="/Admin/Dashboard" element={isAuthenticated() ? <Layout /> : <Navigate to="/Admin" />} >
           <Route path="/Admin/Dashboard/AddUser" element={<AddUser />} />
@@ -54,11 +53,9 @@ function App() {
             {/* Cource */}
           <Route path="/Admin/Dashboard/AddCource" element={<AddCource />} />
           <Route path="/Admin/Dashboard/GetCources" element={<GetCources />} />
-          
           {/* Accounts */}  
           </Route>
         </Routes>
-       
         <Routes>
             {/* <Route path="/user" element={<MemberLayout />}> */}
             <Route path="/user" element={isAuthenticated() ? <MemberLayout /> : <Navigate to="/" />} >

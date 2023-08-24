@@ -13,7 +13,7 @@ const CreateAccount = () => {
   const savebtnhandler = async (e) => {
     e.preventDefault();
     console.log(name, email, password, country, langguage, confrim_password);
-    let result = await fetch("http://128.199.221.11:5000/User/userRegister", {
+    let result = await fetch("http://localhost:5000/User/userRegister", {
       method: "POST",
       body: JSON.stringify({
         name,

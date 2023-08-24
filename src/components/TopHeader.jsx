@@ -34,7 +34,7 @@ const TopHeader = () => {
         </div>
         <div className='col-md-6 d-flex justify-content-end'>
           <div className='row'>
-            <div className='right_container d-flex align-items-baseline'id='doc_hid3'>
+            <div className='right_container d-flex align-items-baseline'>
               <div className='serch'>
                 <input type='search' className='form-control' />
               </div>

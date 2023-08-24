@@ -9,7 +9,7 @@ const Signin = () => {
   const savebtnhandler = async (e) => {
     e.preventDefault();
     console.log( email, password);
-    let result = await fetch("http://128.199.221.11:5000/User/userSigin", {
+    let result = await fetch("http://localhost:5000/User/userSigin", {
       method: "POST",
       body: JSON.stringify({
         email,
@@ -32,9 +32,28 @@ const Signin = () => {
       const token = data.token; 
       // Store the token in local storage
       localStorage.setItem('jwtToken', token);
-      navigate('/user/MemberHome')
-      // window.alert("Successfull")
+      navigate('/user')
+      window.alert("Successfull")
     }
+    // if (
+    //   !email ||
+    //   !password 
+    // ) {
+    //   console.log("Login Sucessfully");
+    //   Swal.fire({
+    //     position:"top-end",
+    //     icon: "error",
+    //     title: "Oops...",
+    //     text: "Please enter your all required fields",
+    //     footer: '<a href="">Why do I have this issue?</a>',
+    //   });
+    // } else {
+    //   Swal.fire("Good job!", "Login Sucessfully!", "success");
+    //   navigate('/user')
+    // }
+    // result = await result.json();
+
+    // console.log("RESULT after Fecth", result);
   };
   const myFun=()=>{
     const toggle = document.querySelector("#togglePassword");
