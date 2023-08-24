@@ -38,9 +38,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin />}/>
           <Route path="/CreateAccont" element={<CreateAccont/>}/>
-          <Route path="/ForgotPassword" element={<ForgotPassword/>}/>        
+          <Route path="/ForgotPassword" element={<ForgotPassword/>}/>   
+          <Route path="/Admin" element={<SigninAdmin />} />   
+        </Routes>  
             {/* User */}
-          <Route path="/Admin" element={<SigninAdmin />} />
+         <Routes>
           {/* <Route path="/Admin/Dashboard" element={<Layout />} > */}
           <Route path="/Admin/Dashboard" element={isAuthenticated() ? <Layout /> : <Navigate to="/Admin" />} >
           <Route path="/Admin/Dashboard/AddUser" element={<AddUser />} />
@@ -53,9 +55,11 @@ function App() {
             {/* Cource */}
           <Route path="/Admin/Dashboard/AddCource" element={<AddCource />} />
           <Route path="/Admin/Dashboard/GetCources" element={<GetCources />} />
+          
           {/* Accounts */}  
           </Route>
         </Routes>
+       
         <Routes>
             {/* <Route path="/user" element={<MemberLayout />}> */}
             <Route path="/user" element={isAuthenticated() ? <MemberLayout /> : <Navigate to="/" />} >
