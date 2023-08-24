@@ -20,7 +20,6 @@ import Signin from "./pages/Signin";
 import ForgotPassword from "./pages/ForgotPassword";
 import MemberLayout from "./components/MemberLayout";
 import TopHeader from "./components/TopHeader";
-// import MemberHome from "./Member/MemberHome";
 // import 
 import Shop from "./Member/Shop";
 import MemberHome from "./Member/MemberHome";
