@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
-import Loader from '../../components/Loader'
-import {getCourcesApi} from "../../Configuration/Const"
+import Loader from '../components/Loader'
+// import {getCourcesApi} from "../../Configuration/Const"
 const GetCources = () => {
 // Fet All Cources from Database
 const [getProducts, setProducts] = useState([]);

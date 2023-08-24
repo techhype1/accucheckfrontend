@@ -6,14 +6,14 @@ const MemberHome = () => {
         {/* <div className="c" id="admin_user"> */}
         <div className='user_profile_root_crad position-absolute ps-2' style={{width:"80%",marginLeft:"20%"}}>
         <div className="container for_common_Top_margin">
-  <div className='row ms-1 doctor_profile'>
-    <div className='doctor_image doc_parent_div d-flex'>
-      <img src='/doctor-bigImage.png' width="138.67px" height="138.67px" alt='' />
-      <div className='doc_child ms-5'>
-        <div className='d-flex ms-1'>
-          <h6 className='doc_name'>Ahmed Ali </h6>
-          <h6 className='doc_level doc_name'>Level 1</h6>
-        </div>
+    <div className='row ms-1 doctor_profile'>
+      <div className='doctor_image doc_parent_div d-flex'>
+        <img src='/doctor-bigImage.png' width="138.67px" height="138.67px" alt='' />
+        <div className='doc_child ms-5'>
+          <div className='d-flex ms-1'>
+            <h6 className='doc_name'>Ahmed Ali </h6>
+            <h6 className='doc_level doc_name'>Level 1</h6>
+          </div>
 
         <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
           <div className="progress-bar w-75"></div>
@@ -81,7 +81,7 @@ const MemberHome = () => {
       {/* Member Acheviments */}
       <div className='container'>
         <div className='row ms-1 text-center'>
-          <div className="col-md-6 width me-3 for_achivements_background text-align-center for_padd">
+          <div className="col-md-6 col-sm-8 mb-3 width me-3 for_achivements_background text-align-center for_padd">
           {/* First Row */}
             <div className='row'>
               <div className='col-md-6 p-2'>

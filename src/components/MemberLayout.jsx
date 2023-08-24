@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import TopHeader from './TopHeader';
 const MemberLayout = () => {
   const handleLogout = () => {
-    localStorage.removeItem('jwtToken'); // Remove the token from local storage
+    // localStorage.removeItem('jwtToken'); // Remove the token from local storage
     // Redirect to the login page or wherever you want
   };
   return (
@@ -102,7 +102,7 @@ const MemberLayout = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-12 mt-5">
+          <div className="col-md-12 ">
           <NavLink to="/"><button onClick={handleLogout} className="btn btn-info w-100 fw-bold">Logout</button></NavLink>
           </div>
         </div>

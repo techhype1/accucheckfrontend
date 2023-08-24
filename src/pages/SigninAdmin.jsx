@@ -39,8 +39,8 @@ const navigate = useNavigate();
       localStorage.setItem('jwtToken', token);
   
       // Redirect to the protected admin dashboard 
-      navigate('/Admin/Dashboard');
-      window.alert("Successful");
+      navigate('/Admin/Dashboard/AddUser');
+      // window.alert("Successful");
     } 
   };
   
