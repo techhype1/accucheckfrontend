@@ -20,7 +20,6 @@ import Signin from "./pages/Signin";
 import ForgotPassword from "./pages/ForgotPassword";
 import MemberLayout from "./components/MemberLayout";
 import TopHeader from "./components/TopHeader";
-// import MemberHome from "./Member/MemberHome";
 // import 
 import Shop from "./Member/Shop";
 import MemberHome from "./Member/MemberHome";
@@ -38,9 +37,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin />}/>
           <Route path="/CreateAccont" element={<CreateAccont/>}/>
-          <Route path="/ForgotPassword" element={<ForgotPassword/>}/>        
-            {/* User */}
-          <Route path="/Admin" element={<SigninAdmin />} />
+          <Route path="/ForgotPassword" element={<ForgotPassword/>}/>   
+          <Route path="/Admin" element={<SigninAdmin />} />   
+        </Routes>  
+            {/* User Hamza */}
+         <Routes>
           {/* <Route path="/Admin/Dashboard" element={<Layout />} > */}
           <Route path="/Admin/Dashboard" element={isAuthenticated() ? <Layout /> : <Navigate to="/Admin" />} >
           <Route path="/Admin/Dashboard/AddUser" element={<AddUser />} />
@@ -53,9 +54,11 @@ function App() {
             {/* Cource */}
           <Route path="/Admin/Dashboard/AddCource" element={<AddCource />} />
           <Route path="/Admin/Dashboard/GetCources" element={<GetCources />} />
+          
           {/* Accounts */}  
           </Route>
         </Routes>
+       
         <Routes>
             {/* <Route path="/user" element={<MemberLayout />}> */}
             <Route path="/user" element={isAuthenticated() ? <MemberLayout /> : <Navigate to="/" />} >
