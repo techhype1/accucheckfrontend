@@ -41,7 +41,7 @@ function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword/>}/>   
           <Route path="/Admin" element={<SigninAdmin />} />   
         </Routes>  
-            {/* User */}
+            {/* User Hamza */}
          <Routes>
           {/* <Route path="/Admin/Dashboard" element={<Layout />} > */}
           <Route path="/Admin/Dashboard" element={isAuthenticated() ? <Layout /> : <Navigate to="/Admin" />} >
